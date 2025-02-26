@@ -1,4 +1,4 @@
-package web.netology.javaqa;
+package Data;
 
 import lombok.Value;
 

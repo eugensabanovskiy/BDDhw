@@ -1,5 +1,7 @@
+package Page;
+
+import Data.DataHelper;
 import com.codeborne.selenide.SelenideElement;
-import web.netology.javaqa.DataHelper;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;

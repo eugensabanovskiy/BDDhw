@@ -1,15 +1,13 @@
-
 plugins {
     id 'java'
-    id "io.freefair.lombok" version "5.0.0-rc4"
+    id "io.freefair.lombok" version "8.12.1"
 }
 
 group 'ru.netology'
 version '1.0-SNAPSHOT'
 
-sourceCompatibility = 1.8
+sourceCompatibility = 11
 
-// кодировка файлов (если используете русский язык в файлах)
 compileJava.options.encoding = "UTF-8"
 compileTestJava.options.encoding = "UTF-8"
 
@@ -20,11 +18,11 @@ repositories {
 dependencies {
     testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter', version: '5.5.2'
     testImplementation 'com.codeborne:selenide:6.19.0'
-    testImplementation 'org.assertj:assertj-core:3.24.2'
+    testImplementation 'org.slf4j:slf4j-api:2.0.9'
+    testImplementation 'org.slf4j:slf4j-simple:2.0.9'
 }
 
 test {
     useJUnitPlatform()
-    // в тестах, вызывая `gradlew test -Dselenide.headless=true` будем передавать этот параметр в JVM (где его подтянет Selenide)
-    systemProperty 'selenide.headless', System.getProperty('selenide.headless')
+    systemProperty 'selenide.headless', System.getProperty('selenide.headless', 'true')
 }
