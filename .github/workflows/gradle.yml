@@ -19,4 +19,4 @@ jobs:
       - name: Start SUT
         run: java -jar ./app-ibank-build-for-testers.jar &
       - name: Build with Gradle
-        run: ./gradlew test --info
+        run: ./gradlew test --info -Djava.awt.headless=true
