@@ -1,8 +1,8 @@
-package Test;
+package test;
 
-import Data.DataHelper;
-import Page.DashboardPage;
-import Page.LoginPage;
+import data.DataHelper;
+import page.DashboardPage;
+import page.LoginPage;
 import lombok.val;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
