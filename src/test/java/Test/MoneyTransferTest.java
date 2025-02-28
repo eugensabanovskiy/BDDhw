@@ -1,5 +1,6 @@
 package test;
 
+import com.codeborne.selenide.Configuration;
 import data.DataHelper;
 import page.DashboardPage;
 import page.LoginPage;
@@ -16,6 +17,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class MoneyTransferTest {
     private static final Logger logger = LoggerFactory.getLogger(MoneyTransferTest.class);
 
+    static {
+        Configuration.headless = true; // Добавлено включение headless режима
+    }
+
     int begBalance1;
     int begBalance2;
     int endBalance1;
@@ -23,6 +28,7 @@ public class MoneyTransferTest {
     int sum;
     DashboardPage dashboardPage;
 
+    // Остальная часть класса остается без изменений
     @BeforeEach
     void setUp() {
         open("http://localhost:9999");
